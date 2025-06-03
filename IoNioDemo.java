@@ -10,7 +10,7 @@ public class IoNioDemo {
         String nioFile = "nio.txt";
 
         FileWriter fw = new FileWriter(ioFile);
-        fw.write("Olá! ");
+        fw.write("Isso aqui é uma String");
         fw.close();
 
         FileReader fr = new FileReader(ioFile);
@@ -22,7 +22,7 @@ public class IoNioDemo {
         br.close();
 
         Path nioPath = Paths.get(nioFile);
-        Files.write(nioPath, "Hello from java.nio".getBytes(StandardCharsets.UTF_8));
+        Files.write(nioPath, "Isso aqui é uma String".getBytes(StandardCharsets.UTF_8));
 
         FileChannel channel = FileChannel.open(nioPath, StandardOpenOption.READ);
         ByteBuffer buffer = ByteBuffer.allocate(1024);
